@@ -1,0 +1,71 @@
+import type { Landmark, LandmarkCategory } from '../types';
+
+/** 30+ landmark indicators used by walking maps & landmark-based navigation. */
+export const LANDMARKS: Landmark[] = [
+  { id: 'lm-grandpalace', category: 'temple', lat: 13.75, lng: 100.491, en: 'Grand Palace', th: 'พระบรมมหาราชวัง', my: 'မဟာရာဝီရပ်' },
+  { id: 'lm-watpho', category: 'temple', lat: 13.746, lng: 100.493, en: 'Wat Pho (Reclining Buddha)', th: 'วัดโพธิ์ (พระนอน)', my: 'ဘုရားဖိုး (အိပ်တရားတော်)' },
+  { id: 'lm-watarun', category: 'temple', lat: 13.7437, lng: 100.489, en: 'Wat Arun', th: 'วัดอรุณ', my: 'အာရုံဘုရား' },
+  { id: 'lm-watsaket', category: 'temple', lat: 13.745, lng: 100.502, en: 'Wat Saket (Golden Mount)', th: 'วัดสระเกศ (ภูเขาทอง)', my: 'ရွှေတောင်' },
+  { id: 'lm-watbowon', category: 'temple', lat: 13.76, lng: 100.499, en: 'Wat Bowonniwet', th: 'วัดบวรนิเวศ', my: 'ဘုရားဘိုးနဝရတ်' },
+  { id: 'lm-erawan', category: 'monument', lat: 13.7437, lng: 100.5432, en: 'Erawan Shrine', th: 'ศาลพระพรหม', my: 'ဗြဟ္မာ ဘုရားကျောင်း' },
+  { id: 'lm-victory', category: 'monument', lat: 13.7647, lng: 100.5378, en: 'Victory Monument', th: 'อนุสาวรีย์ชัยสมรภูมิ', my: 'အောင်ခြိန်ရုပ်တု' },
+  { id: 'lm-democracy', category: 'monument', lat: 13.754, lng: 100.502, en: 'Democracy Monument', th: 'อนุสาวรีย์ประชาธิปไตย', my: 'ဒီမိုကရေစီရုပ်တု' },
+  { id: 'lm-baiyoke', category: 'mall', lat: 13.7569, lng: 100.537, en: 'Baiyoke Tower II', th: 'ตึกใบหยก 2', my: 'ဘိုကချော တာဝါ ၂' },
+  { id: 'lm-mbk', category: 'mall', lat: 13.7443, lng: 100.5302, en: 'MBK Center', th: 'เอ็มบีเค เซ็นเตอร์', my: 'အမ်ဘီကေ စင်တာ' },
+  { id: 'lm-siamparagon', category: 'mall', lat: 13.7466, lng: 100.5343, en: 'Siam Paragon', th: 'สยามพารากอน', my: 'ဆိုင်းယမ်ပါရောဂျင်' },
+  { id: 'lm-centralworld', category: 'mall', lat: 13.746, lng: 100.5395, en: 'CentralWorld', th: 'เซ็นทรัลเวิลด์', my: 'စင်တရာဝေါလ်ဒ်' },
+  { id: 'lm-terminal21', category: 'mall', lat: 13.7376, lng: 100.5613, en: 'Terminal 21 Asok', th: 'เทอร์มินัล 21 อโศก', my: 'တာမီနယ် ၂၁ အိုက်ဆု' },
+  { id: 'lm-emquartier', category: 'mall', lat: 13.729, lng: 100.572, en: 'EmQuartier', th: 'ดิ เอ็มควอเทียร์', my: 'အင်မ်ကွာတီးယား' },
+  { id: 'lm-iconsiam', category: 'mall', lat: 13.7225, lng: 100.509, en: 'ICONSIAM', th: 'ไอคอนสยาม', my: 'အိုက်ကွန်ဆိုင်းယမ်' },
+  { id: 'lm-centralladprao', category: 'mall', lat: 13.817, lng: 100.563, en: 'Central Ladprao', th: 'เซ็นทรัล ลาดพร้าว', my: 'စင်တရာ လတ်ဖရော' },
+  { id: 'lm-lumpinipark', category: 'park', lat: 13.724, lng: 100.536, en: 'Lumpini Park', th: 'สวนลุมพินี', my: 'လမ်ပီနီပန်းခြံ' },
+  { id: 'lm-benjakitti', category: 'park', lat: 13.73, lng: 100.56, en: 'Benjakitti Park', th: 'สวนเบญจกิตติ', my: 'ဘင်္ဂျက်ကစ္စတီ ပန်းခြံ' },
+  { id: 'lm-chatuchakpark', category: 'park', lat: 13.7982, lng: 100.5531, en: 'Chatuchak Park', th: 'สวนจตุจักร', my: 'ချာတုတ်ခတ် ပန်းခြံ' },
+  { id: 'lm-chatuchakmarket', category: 'market', lat: 13.798, lng: 100.551, en: 'Chatuchak Weekend Market', th: 'ตลาดนัดจตุจักร', my: 'ချာတုတ်ခတ်ဈေး' },
+  { id: 'lm-pratunam', category: 'market', lat: 13.753, lng: 100.541, en: 'Pratunam Market', th: 'ประตูน้ำ', my: 'ပရသျှင်နမ်ဈေး' },
+  { id: 'lm-yaowarat', category: 'market', lat: 13.739, lng: 100.511, en: 'Yaowarat (Chinatown)', th: 'เยาวราช', my: 'ရော်ရဝါး (တရုတ်မြို့)' },
+  { id: 'lm-khaosan', category: 'market', lat: 13.759, lng: 100.497, en: 'Khao San Road', th: 'ถนนข้าวสาร', my: 'ချောဆန်လမ်း' },
+  { id: 'lm-bumrungrad', category: 'hospital', lat: 13.739, lng: 100.554, en: 'Bumrungrad Hospital', th: 'โรงพยาบาลบำรุงราษฎร์', my: 'ဘမ်ရုန်ကရန် ဆေးရုံ' },
+  { id: 'lm-bangkokhospital', category: 'hospital', lat: 13.726, lng: 100.568, en: 'Bangkok Hospital', th: 'โรงพยาบาลกรุงเทพ', my: 'ဘန်ကောင် ဆေးရုံ' },
+  { id: 'lm-ramathibodi', category: 'hospital', lat: 13.749, lng: 100.524, en: 'Ramathibodi Hospital', th: 'โรงพยาบาลรามาธิบดี', my: 'ရမ်သီးပီဒီ ဆေးရုံ' },
+  { id: 'lm-chula', category: 'university', lat: 13.74, lng: 100.529, en: 'Chulalongkorn University', th: 'จุฬาลงกรณ์มหาวิทยาลัย', my: 'ကျူလိုင်ကွန် တက္ကသိုလ်' },
+  { id: 'lm-kasetsart', category: 'university', lat: 13.847, lng: 100.568, en: 'Kasetsart University', th: 'มหาวิทยาลัยเกษตรศาสตร์', my: 'ကဆုန်တက္ကသိုလ်' },
+  { id: 'lm-thammasat', category: 'university', lat: 13.963, lng: 100.606, en: 'Thammasat University', th: 'มหาวิทยาลัยธรรมศาสตร์', my: 'သမတသိုင်းတက္ကသိုလ်' },
+  { id: 'lm-qsncc', category: 'government', lat: 13.723, lng: 100.5608, en: 'Queen Sirikit Convention Center', th: 'ศูนย์การประชุมแห่งชาติสิริกิติ์', my: 'ညီလာခံဗိုလ်ချုပ်' },
+  { id: 'lm-govcomplex', category: 'government', lat: 13.842, lng: 100.483, en: 'Government Complex', th: 'ศูนย์ราชการแจ้งวัฒนะ', my: 'အစိုးရရုံးချုပ်' },
+  { id: 'lm-sanamluang', category: 'park', lat: 13.756, lng: 100.493, en: 'Sanam Luang', th: 'สนามหลวง', my: 'ဆနမ်လွန်း' },
+  { id: 'lm-suvarnabhumi', category: 'airport', lat: 13.69, lng: 100.7501, en: 'Suvarnabhumi Airport', th: 'สนามบินสุวรรณภูมิ', my: 'ဆူဝန်နဖူမီ လေဆိပ်' },
+  { id: 'lm-donmueang', category: 'airport', lat: 13.9144, lng: 100.6057, en: 'Don Mueang Airport', th: 'สนามบินดอนเมือง', my: 'ဒုန်မျိုင် လေဆိပ်' },
+  { id: 'lm-centralpier', category: 'pier', lat: 13.7185, lng: 100.5137, en: 'Sathorn Central Pier', th: 'ท่าสาทร', my: 'ဆသွန်ဆိပ်ကမ်း' },
+  { id: 'lm-mahankhon', category: 'monument', lat: 13.7252, lng: 100.539, en: 'King Power Mahanakhon', th: 'คิง เพาเวอร์ มหานคร', my: 'မဟာနခုန် တာဝါ' },
+];
+
+export const CATEGORY_ICON: Record<LandmarkCategory, string> = {
+  temple: 'business',
+  mall: 'cart',
+  park: 'leaf',
+  hospital: 'medkit',
+  university: 'school',
+  market: 'pricetag',
+  monument: 'trophy',
+  airport: 'airplane',
+  pier: 'boat',
+  government: 'business-center',
+  transit: 'train',
+};
+
+export const CATEGORY_COLOR: Record<LandmarkCategory, string> = {
+  temple: '#E0A83F',
+  mall: '#E86FA6',
+  park: '#4CAF50',
+  hospital: '#EF5350',
+  university: '#7E57C2',
+  market: '#FF8A3D',
+  monument: '#F4C542',
+  airport: '#4FA3F7',
+  pier: '#2F9BD6',
+  government: '#78909C',
+  transit: '#1FA85C',
+};
+
+export const landmarkById = (id: string): Landmark | undefined => LANDMARKS.find((l) => l.id === id);
